@@ -12,3 +12,9 @@ Projet jupyter notebook qui permet de récupérer les données 'instantannées' 
 
 
 <div id="test"> <p> Test </p> </div>
+
+
+
+# Ressources importantes
+Endroit où on chope les id:
+  * https://www.openstreetmap.org/#map=8/44.064/2.543
