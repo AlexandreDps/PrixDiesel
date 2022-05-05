@@ -69,12 +69,14 @@ latitudes = []
 longitudes = []
 prixGazole = [] 
 departements = []
+cantons = []
 
 for i in range(len(r)):
     
     latitudes.append(float(r[i].attrib['latitude'])/100000)
     longitudes.append(float(r[i].attrib['longitude'])/100000)
     departements.append(int(r[i].attrib['cp'][:2:]))
+    cantons.append(r[i][1].text)
     test = r[i] #Vérifie que r[i] peut être parcouru au rang 4
     if len(test) > 4:
         if r[i][4].attrib['nom'] == 'Gazole':
@@ -90,7 +92,7 @@ for i in range(len(r)):
 ############################### Moyenne par départements #####################
 
 PrixParDepartements = {}
-for d in range(1,96):
+for d in range(1,96): #Car 96 départements renseignés
     sum = 0
     nb = 0
     for i in range (len(departements)):
@@ -101,7 +103,19 @@ for d in range(1,96):
     PrixParDepartements[d] = sum/nb
             
     
-    
+############################### Moyenne par cantons #####################
+
+PrixParCantons = {}
+
+for d in set(cantons):
+    sum = 0
+    nb = 0
+    for i in range (len(cantons)):
+        if d == cantons[i]:
+            if prixGazole[i] != None:
+                sum += prixGazole[i]
+                nb += 1
+    if nb>0 : PrixParCantons[d] = sum/nb
 
 
 
