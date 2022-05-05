@@ -5,55 +5,10 @@ Created on Tue May  3 15:29:49 2022
 @author: descompa
 """
 
-from zipfile import ZipFile 
-import wget
-import os
+import DownloadData as DD
 
-
-#On supprime les vieux fichiers
-if os.path.isfile('PrixCarburants_instantane.zip') == True :
-    os.remove("PrixCarburants_instantane.zip")
-if os.path.isfile("PrixCarburants_instantane.xml") == True :
-    os.remove("PrixCarburants_instantane.xml")
-if os.path.isfile("PrixCarburants_annuel_2022.zip") == True :
-    os.remove("PrixCarburants_annuel_2022.zip")
-if os.path.isfile("PrixCarburants_annuel_2022.xml") == True :
-    os.remove("PrixCarburants_annuel_2022.xml")
-
-#Téléchargement des fichiers zip
-url='https://donnees.roulez-eco.fr/opendata/instantane'
-wget.download(url)
-url='https://donnees.roulez-eco.fr/opendata/annee'
-wget.download(url)
-
-
-# Décompression des fichiers zip
-file = "PrixCarburants_instantane.zip"
-
-# ouvrir le fichier zip en mode lecture
-with ZipFile(file, 'r') as zip: 
-    # afficher tout le contenu du fichier zip
-    #print("Contenu du dossier zip : ")
-    #zip.printdir() 
-  
-    # extraire tous les fichiers
-    print('Extraction du fichier 1/2 ...') 
-    zip.extractall() 
-    print('Fichier 1 dézippé') 
-
-# Décompression du fichier zip
-file = "PrixCarburants_annuel_2022.zip"
-
-# ouvrir le fichier zip en mode lecture
-with ZipFile(file, 'r') as zip: 
-    # afficher tout le contenu du fichier zip
-    #print("Contenu du dossier zip : ")
-    #zip.printdir() 
-  
-    # extraire tous les fichiers
-    print('Extraction du fichier 2/2 ...') 
-    zip.extractall() 
-    print('Terminé!') 
+DD.get_ten_Mins_Data()
+DD.get_annualData()
 
 ############################### Récupération des données ###############################
 
