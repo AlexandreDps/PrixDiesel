@@ -8,11 +8,13 @@ import folium
 m = folium.Map(location=[46.232192999999995, 2.209666999999996], zoom_start=5)
 
 #liste des identifiants OSM de chaque région
-l = [8637, 3792883, 8654, 3792877, 3792878, 3792876, 4217435, 3793170]
+l = [3792883, 8654, 3792877, 3792878, 3792876, 4217435, 3793170, 102740, 8650, 8640, 8649, 7112309, 3792880]
 
 for identifiant in l:
     region = f"https://polygons.openstreetmap.fr/get_geojson.py?id={identifiant}&params=0"
     folium.GeoJson(region, name="geojson").add_to(m)
+    
+m
 
 '''
 exemple changement couleur : utile pour après
