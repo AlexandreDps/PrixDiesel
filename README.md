@@ -18,3 +18,6 @@ Projet jupyter notebook qui permet de récupérer les données 'instantannées' 
 # Ressources importantes
 Endroit où on chope les id:
   * https://www.openstreetmap.org/#map=8/44.064/2.543
+
+Endroit où on attrape les polygones bg c'est stylé:
+  * https://polygons.openstreetmap.fr/
