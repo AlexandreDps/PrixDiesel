@@ -15,3 +15,6 @@ Endroit où on chope les id:
 
 Endroit où on attrape les polygones bg c'est stylé:
   * https://polygons.openstreetmap.fr/
+
+Contours:
+ * https://github.com/gregoiredavid/france-geojson
