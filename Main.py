@@ -15,6 +15,8 @@ DD.get_annualData()
 
 
 #Dictionnaires prix
-prixParDepartements = DS.DictDepartements()
-prixParCantons = DS.DictCantons()
+prixParDepartements = DS.DictDepartements("PrixCarburants_instantane.xml")
+prixParCantons = DS.DictCantons("PrixCarburants_instantane.xml")
+
+
 
