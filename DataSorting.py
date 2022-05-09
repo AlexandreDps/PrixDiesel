@@ -25,9 +25,12 @@ def ArbreGlobal(fichier):
     cantons = []
     
     for i in range(len(r)):
-        
-        latitudes.append(float(r[i].attrib['latitude'])/100000)
-        longitudes.append(float(r[i].attrib['longitude'])/100000)
+        if (r[i].attrib['latitude']) != '' :
+            latitudes.append(float(r[i].attrib['latitude'])/100000)
+        else : latitudes.append(None)
+        if r[i].attrib['longitude'] != '' :
+            longitudes.append(float(r[i].attrib['longitude'])/100000)
+        else : longitudes.append(None)
         departements.append(int(r[i].attrib['cp'][:2:]))
         cantons.append(r[i][1].text)
         test = r[i] #Vérifie que r[i] peut être parcouru au rang 4
