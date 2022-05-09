@@ -11,12 +11,10 @@ import DataSorting as DS
 
 #Mise à jour de la data
 DD.get_ten_Mins_Data()
-DD.get_annualData()
+DD.get_get_dailyData()
 
 
 #Dictionnaires prix
 prixParDepartements = DS.DictDepartements("PrixCarburants_instantane.xml")
 prixParCantons = DS.DictCantons("PrixCarburants_instantane.xml")
-
-
 
