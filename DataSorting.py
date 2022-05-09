@@ -8,31 +8,44 @@ Created on Thu May  5 17:43:31 2022
 from lxml import etree
 
 
-tree = etree.parse("PrixCarburants_instantane.xml")
+#"PrixCarburants_instantane.xml"
 
-r = tree.getroot()
 
-latitudes = []
-longitudes = []
-prixGazole = [] 
-departements = []
-cantons = []
 
-for i in range(len(r)):
+def ArbreGlobal(fichier):
+   
+    tree = etree.parse(fichier)
     
-    latitudes.append(float(r[i].attrib['latitude'])/100000)
-    longitudes.append(float(r[i].attrib['longitude'])/100000)
-    departements.append(int(r[i].attrib['cp'][:2:]))
-    cantons.append(r[i][1].text)
-    test = r[i] #Vérifie que r[i] peut être parcouru au rang 4
-    if len(test) > 4:
-        if r[i][4].attrib['nom'] == 'Gazole':
-            prixGazole.append(float(r[i][4].attrib['valeur']))
+    r = tree.getroot()
+    
+    latitudes = []
+    longitudes = []
+    prixGazole = [] 
+    departements = []
+    cantons = []
+    
+    for i in range(len(r)):
+        
+        latitudes.append(float(r[i].attrib['latitude'])/100000)
+        longitudes.append(float(r[i].attrib['longitude'])/100000)
+        departements.append(int(r[i].attrib['cp'][:2:]))
+        cantons.append(r[i][1].text)
+        test = r[i] #Vérifie que r[i] peut être parcouru au rang 4
+        if len(test) > 4:
+            if r[i][4].attrib['nom'] == 'Gazole':
+                prixGazole.append(float(r[i][4].attrib['valeur']))
+            else : prixGazole.append(None)
         else : prixGazole.append(None)
-    else : prixGazole.append(None)
+        
+    res = [latitudes,longitudes,prixGazole,departements,cantons]
+    return res
 
 
-def DictDepartements(dictionnaire = {}):
+
+def DictDepartements(fichier, dictionnaire = {}):
+    data = ArbreGlobal(fichier)
+    departements = data[3]
+    prixGazole = data[2]
     for d in range(1,96): #Car 96 départements renseignés
         sum = 0
         nb = 0
@@ -48,8 +61,10 @@ def DictDepartements(dictionnaire = {}):
 ############################### Moyenne par cantons #####################
 
 
-def DictCantons(dictionnaire={}):
-    
+def DictCantons(fichier, dictionnaire={}):
+    data = ArbreGlobal(fichier)
+    cantons = data[4]
+    prixGazole = data[2]
     for d in set(cantons):
         sum = 0
         nb = 0
