@@ -8,6 +8,7 @@ Created on Thu May  5 17:25:14 2022
 from zipfile import ZipFile 
 import wget
 import os
+import datetime
 
 
 
@@ -42,19 +43,25 @@ def get_ten_Mins_Data() :
 
     
 
-def get_annualData():
+def get_dailyData():
     
-    if os.path.isfile("PrixCarburants_annuel_2022.zip") == True :
-        os.remove("PrixCarburants_annuel_2022.zip")
-    if os.path.isfile("PrixCarburants_annuel_2022.xml") == True :
-        os.remove("PrixCarburants_annuel_2022.xml")
+    annee = datetime.datetime.today().strftime('%Y')
+    mois = datetime.datetime.today().strftime('%m')
+    jour =  '0' + str(int(datetime.datetime.today().strftime('%d')) - 1) #Veille
+    chaine = annee + mois + jour
+    
+    
+    if os.path.isfile("PrixCarburants_quotidien_" + chaine + ".zip") == True :
+        os.remove("PrixCarburants_quotidien_" + chaine + ".zip")
+    if os.path.isfile("PrixCarburants_quotidien_" + chaine + ".xml") == True :
+        os.remove("PrixCarburants_quotidien_" + chaine + ".xml")
         
-    url='https://donnees.roulez-eco.fr/opendata/annee'
+    url='https://donnees.roulez-eco.fr/opendata/jour/' + chaine
     wget.download(url)
     
     # Décompression du fichier zip
-    file = "PrixCarburants_annuel_2022.zip"
+    file = "PrixCarburants_quotidien_" + chaine + ".zip"
     with ZipFile(file, 'r') as zip: 
-        print('Extraction du fichier PrixCarburants_annuel_2022 ...') 
+        print('Extraction du fichier PrixCarburants_quotidien ...') 
         zip.extractall() 
         print('Terminé !') 
