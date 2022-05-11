@@ -32,14 +32,17 @@ def cpRegion(l):
         soup = BeautifulSoup(r.content, 'html.parser')
         l  = []
         if reg == 'Occitanie_(région_administrative)':
+            reg = reg[:9]
             for i in range(1, nbCodeOCC(soup)+1):
-                l.append(Xpath(soup,f'//*[@id="mw-content-text"]/div[1]/table[1]/tbody/tr[8]/td/text()[{i}]'))
+                l.append(int(Xpath(soup,f'//*[@id="mw-content-text"]/div[1]/table[1]/tbody/tr[8]/td/text()[{i}]')[2:4]))
             d[reg] = l
         else:
             for i in range(1, nbCode(soup)+1):
-                l.append(Xpath(soup,f'//*[@id="mw-content-text"]/div[1]/table[1]/tbody/tr[7]/td/text()[{i}]'))
+                l.append(int(Xpath(soup,f'//*[@id="mw-content-text"]/div[1]/table[1]/tbody/tr[7]/td/text()[{i}]')[2:4]))
             d[reg] = l
     return d
 
-l = ['Nouvelle-Aquitaine', 'Occitanie_(région_administrative)', 'Pays_de_la_Loire']
+l = ['Nouvelle-Aquitaine', 'Occitanie_(région_administrative)', 'Pays_de_la_Loire', 'Provence-Alpes-Côte_d\'Azur', 'Bourgogne-Franche-Comté', 'Centre-Val_de_Loire', 'Bretagne_(région_administrative)', 'Grand_Est', 'Île-de-France', 'Normandie_(région_administrative)', 'Hauts-de-France']
+
+#'Auvergne-Rhône-Alpes'
 print(cpRegion(l))
