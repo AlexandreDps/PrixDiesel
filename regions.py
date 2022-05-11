@@ -26,3 +26,5 @@ style = {'fillColor': '#228B22', 'color': '#228B22'}
 herault = f"https://polygons.openstreetmap.fr/get_geojson.py?id=3792883&params=0"
 folium.GeoJson(herault, name="geojson", style_function=lambda x:style).add_to(m)
 '''
+def alexander(mcqueen):
+    return mcqueen
