@@ -12,7 +12,12 @@ import datetime
 
 
 
-
+def get_chaine():
+    #30J avant pour observer la variation
+    annee = (datetime.datetime.today() - datetime.timedelta(5)).strftime('%Y')
+    mois = (datetime.datetime.today() - datetime.timedelta(5)).strftime('%m')
+    jour =  (datetime.datetime.today() - datetime.timedelta(5)).strftime('%d')
+    return annee + mois + jour
 
 def get_ten_Mins_Data() :
     
@@ -45,10 +50,8 @@ def get_ten_Mins_Data() :
 
 def get_dailyData():
     
-    annee = datetime.datetime.today().strftime('%Y')
-    mois = datetime.datetime.today().strftime('%m')
-    jour =  '0' + str(int(datetime.datetime.today().strftime('%d')) - 1) #Veille
-    chaine = annee + mois + jour
+    
+    chaine = get_chaine()
     
     
     if os.path.isfile("PrixCarburants_quotidien_" + chaine + ".zip") == True :

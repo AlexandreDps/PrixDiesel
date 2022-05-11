@@ -20,10 +20,11 @@ prixParCantons = DS.DictCantons("PrixCarburants_instantane.xml")
 
 
 
-chaine = DS.get_chaine()
+chaine = DD.get_chaine()
 #Dictionnaires prix (Instantané)
 prixParDepartementsB = DS.DictDepartements("PrixCarburants_quotidien_" + chaine + ".xml")
 prixParCantonsB = DS.DictCantons("PrixCarburants_quotidien_" + chaine + ".xml")
 
 
-
+diffDepartements = {key: prixParDepartements[key] - prixParDepartementsB.get(key, 0) for key in prixParDepartements.keys()}
+diffCantons = {key: prixParCantons[key] - prixParCantonsB.get(key, 0) for key in prixParCantons.keys()}
