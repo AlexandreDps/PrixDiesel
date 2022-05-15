@@ -88,6 +88,7 @@ def cpRegion(l):
                 path = Xpath(soup,f'//*[@id="mw-content-text"]/div[1]/table[1]/tbody/tr[7]/td/text()[{i}]')[2:4]
                 listeCP(l, path)
             d[reg] = l
+    d['Corse'] = [20]
     return d
 
 
@@ -108,7 +109,8 @@ Résultat obtenu :
     'Grand_Est': [8, 10, 51, 52, 54, 55, 57, 67, 68, 88],
     'Île-de-France': [75, 77, 78, 91, 92, 93, 94, 95],
     'Normandie_(région_administrative)': [14, 27, 50, 61, 76],
-    'Hauts-de-France': [2, 59, 60, 62, 80]
+    'Hauts-de-France': [2, 59, 60, 62, 80],
+    'Corse': [20]
     }
     
 '''
