@@ -21,5 +21,9 @@ Récupérations des polygones :
 Contours:
  * https://github.com/gregoiredavid/france-geojson
 
-Help markers:
+Help dessin carte moyenne/variation:
  * https://python-visualization.github.io/folium/quickstart.html
+ * https://www.python-graph-gallery.com/map-read-geojson-with-python-geopandas
+ * https://www.python-graph-gallery.com/choropleth-map-geopandas-python
+ * https://plotly.com/python/mapbox-county-choropleth/
+ * https://towardsdatascience.com/folium-and-choropleth-map-from-zero-to-pro-6127f9e68564
