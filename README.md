@@ -20,3 +20,6 @@ Récupérations des polygones :
 
 Contours:
  * https://github.com/gregoiredavid/france-geojson
+
+Help markers:
+ * https://python-visualization.github.io/folium/quickstart.html
