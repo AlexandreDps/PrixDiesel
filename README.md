@@ -27,3 +27,4 @@ Help dessin carte moyenne/variation:
  * https://www.python-graph-gallery.com/choropleth-map-geopandas-python
  * https://plotly.com/python/mapbox-county-choropleth/
  * https://towardsdatascience.com/folium-and-choropleth-map-from-zero-to-pro-6127f9e68564
+ * centroid geojson : https://pypi.org/project/geojson_utils/
