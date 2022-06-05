@@ -9,7 +9,7 @@
 
 # Installation et utilisation
 
-<h4> Modules nécessaires pour l'obtention des différentes cartes:</h4>
+Modules nécessaires pour l'obtention des différentes cartes:
  *  <code>folium</code>
  *  <code>geojson</code>
  *  <code>json</code>
