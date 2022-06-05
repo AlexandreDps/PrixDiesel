@@ -21,6 +21,7 @@
  *  <code>centroid</code> from <code>geojson_utils</code>
  *  <code>urlopen</code> from <code>urllib.request</code>
 
+
 Pour pouvoir utiliser notre projet, il vous suffit de télecharger tout le répertoire ou de cloner le répertoire avec la commande suivante:
  * <code>git clone https://github.com/Alemanu211/PrixDiesel.git</code>
 
