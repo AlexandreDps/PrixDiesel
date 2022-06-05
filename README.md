@@ -1,6 +1,3 @@
-
-
-
 # Prix Diesel France
 
 <h4> Modules nécessaires : <code>folium</code>, <code>geojson</code>, <code>json</code>, <code>wget</code>, <code>etree</code>, <code>os</code>, <code>zipfile</code>, <code>datetime</code>, <code>centroid</code> from <code>geojson_utils</code>, <code>urlopen</code> from <code>urllib.request</code></h4>
@@ -11,20 +8,20 @@
 <p> Pour des informations plus détaillées, veuillez consulter le document <code>Projet ISOC631.pdf</code> présent dans le répertoire</p>
 
 
-# Ressources importantes (Carte folium)
-Récupération des ID:
-  * https://www.openstreetmap.org/#map=8/44.064/2.543
+# Exemple de résultat
 
-Récupérations des polygones :
-  * https://polygons.openstreetmap.fr/
+Voici une des cartes obtenues lors de notre projet (<a href = "https://github.com/Alemanu211/PrixDiesel/blob/main/question3_regions.ipynb">fichier _question3_regions.ipynb_</a>), elle représente le prix moyen du diesel par région avec des flèches de variation :
 
-Contours:
+![q3_reg_bis](https://user-images.githubusercontent.com/93133836/172074128-e99654d4-2b06-466d-8e37-cafbb2a3e184.PNG)
+
+
+# Ressources utilisées
+
+Récupérations des contours:
  * https://github.com/gregoiredavid/france-geojson
 
-Help dessin carte moyenne/variation:
+Aides pour l'affichage des cartes:
  * https://python-visualization.github.io/folium/quickstart.html
- * https://www.python-graph-gallery.com/map-read-geojson-with-python-geopandas
- * https://www.python-graph-gallery.com/choropleth-map-geopandas-python
  * https://plotly.com/python/mapbox-county-choropleth/
  * https://towardsdatascience.com/folium-and-choropleth-map-from-zero-to-pro-6127f9e68564
  * centroid geojson : https://pypi.org/project/geojson_utils/
