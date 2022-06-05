@@ -3,7 +3,7 @@
 
 # Prix Diesel France
 
-<h4> Modules nécessaires : <code>geojson</code>, <code>json</code>, <code>wget</code>, <code>etree</code>, <code>os</code>, <code>zipfile</code>, <code>datetime</code>, <code>centroid</code> from <code>geojson_utils</code>, <code>urlopen</code> from <code>urllib.request</code></h4>
+<h4> Modules nécessaires : <code>folium</code>, <code>geojson</code>, <code>json</code>, <code>wget</code>, <code>etree</code>, <code>os</code>, <code>zipfile</code>, <code>datetime</code>, <code>centroid</code> from <code>geojson_utils</code>, <code>urlopen</code> from <code>urllib.request</code></h4>
 <p>Projet jupyter notebook de qui permet de récupérer les données 'instantannées' (mises à jour toutes les 10 minutes) afin d'afficher sur une carte de la france, le prix moyen de l'essence par canton, régions et départements.</p>
 
 <p> Les données sont récupérées sur le <a href = "https://www.prix-carburants.gouv.fr/rubrique/opendata/">site du gouvernement français</a></p>
