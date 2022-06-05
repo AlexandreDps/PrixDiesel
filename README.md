@@ -8,6 +8,18 @@
 <p> Pour des informations plus détaillées, veuillez consulter le document <code>Projet ISOC631.pdf</code> présent dans le répertoire</p>
 
 
+# Installation et utilisation
+
+Pour pouvoir utiliser notre projet, il vous suffit de télecharger tout le répertoire ou de cloner le répertoire avec la commande suivante:
+ * <code>git clone https://github.com/Alemanu211/PrixDiesel.git</code>
+
+Ensuite, vous devez exécuter l'un des fichiers _.ipynb_, ils offrent tous un résultat différent :
+ * Le fichier _question1.ipynb_ donne une carte de la France contenant 2000 stations-service
+ * Le fichier _question2.ipynb_ ajoute des flèches de variation sur l'affichage du fichier précédent
+ * Les fichiers _question3_cantons.ipynb_, _question3_departements.ipynb_ et _question3_regions.ipynb_ donne respectivement une carte du prix moyen du diesel avec les variations pour chaque canton, puis pour chaque département et enfin pour chaque région
+ * centroid geojson : https://pypi.org/project/geojson_utils/
+
+
 # Exemple de résultat
 
 Voici une des cartes obtenues lors de notre projet (<a href = "https://github.com/Alemanu211/PrixDiesel/blob/main/question3_regions.ipynb">fichier _question3_regions.ipynb_</a>), elle représente le prix moyen du diesel par région avec des flèches de variation :
