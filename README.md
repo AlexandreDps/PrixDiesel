@@ -5,7 +5,7 @@
 
 <p> Les données sont récupérées sur le <a href = "https://www.prix-carburants.gouv.fr/rubrique/opendata/">site du gouvernement français</a></p>
 <p> Après téléchargement et décompression des fichiers xlml qui nous intéressent, on trie les données à l'aide d'Element Tree</p>
-<p> Pour des informations plus détaillées, veuillez consulter le document <code>Projet ISOC631.pdf</code> présent dans le répertoire</p>
+<p> Pour des informations plus détaillées, veuillez consulter le document <code><a href = "https://github.com/Alemanu211/PrixDiesel/blob/main/Projet%20ISOC631.pdf"> Projet ISOC631.pdf</a></code> présent dans le répertoire</p>
 
 
 # Installation et utilisation
@@ -17,12 +17,11 @@ Ensuite, vous devez exécuter l'un des fichiers _.ipynb_, ils offrent tous un r�
  * Le fichier _question1.ipynb_ donne une carte de la France contenant 2000 stations-service
  * Le fichier _question2.ipynb_ ajoute des flèches de variation sur l'affichage du fichier précédent
  * Les fichiers _question3_cantons.ipynb_, _question3_departements.ipynb_ et _question3_regions.ipynb_ donne respectivement une carte du prix moyen du diesel avec les variations pour chaque canton, puis pour chaque département et enfin pour chaque région
- * centroid geojson : https://pypi.org/project/geojson_utils/
 
 
 # Exemple de résultat
 
-Voici une des cartes obtenues lors de notre projet (<a href = "https://github.com/Alemanu211/PrixDiesel/blob/main/question3_regions.ipynb">fichier _question3_regions.ipynb_</a>), elle représente le prix moyen du diesel par région avec des flèches de variation :
+Voici une des cartes obtenues lors de notre projet (fichier <a href = "https://github.com/Alemanu211/PrixDiesel/blob/main/question3_regions.ipynb">_question3_regions.ipynb_</a>), elle représente le prix moyen du diesel par région avec des flèches de variation :
 
 ![q3_reg_bis](https://user-images.githubusercontent.com/93133836/172074128-e99654d4-2b06-466d-8e37-cafbb2a3e184.PNG)
 
