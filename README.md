@@ -10,16 +10,16 @@
 # Installation et utilisation
 
 <h4> Modules nécessaires pour l'obtention des différentes cartes:</h4>
- * <code>folium</code>
- * <code>geojson</code>
- * <code>json</code>
- * <code>wget</code>
- * <code>etree</code>
- * <code>os</code>
- * <code>zipfile</code>
- * <code>datetime</code>
- * <code>centroid</code> from <code>geojson_utils</code>
- * <code>urlopen</code> from <code>urllib.request</code>
+ *  <code>folium</code>
+ *  <code>geojson</code>
+ *  <code>json</code>
+ *  <code>wget</code>
+ *  <code>etree</code>
+ *  <code>os</code>
+ *  <code>zipfile</code>
+ *  <code>datetime</code>
+ *  <code>centroid</code> from <code>geojson_utils</code>
+ *  <code>urlopen</code> from <code>urllib.request</code>
 
 Pour pouvoir utiliser notre projet, il vous suffit de télecharger tout le répertoire ou de cloner le répertoire avec la commande suivante:
  * <code>git clone https://github.com/Alemanu211/PrixDiesel.git</code>
