@@ -23,7 +23,7 @@ Modules nécessaires pour l'obtention des différentes cartes:
 
 
 Pour pouvoir utiliser notre projet, il vous suffit de télecharger tout le répertoire ou de cloner le répertoire avec la commande suivante:
- * <code>git clone https://github.com/Alemanu211/PrixDiesel.git</code>
+ * <code>git clone https://github.com/AlexandreDps/PrixDiesel.git</code>
 
 Ensuite, vous devez exécuter l'un des fichiers _.ipynb_, ils offrent tous un résultat différent :
  * Le fichier _question1.ipynb_ donne une carte de la France contenant 2000 stations-service
